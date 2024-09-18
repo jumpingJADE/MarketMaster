@@ -1,0 +1,31 @@
+@import "antd/dist/reset.css";
+
+* {
+  -webkit-user-drag: none;
+}
+
+#root,
+.app {
+  height: 100%;
+}
+
+.app {
+  display: flex;
+  background-color: #f8f9fa;
+}
+
+.m-slide {
+  width: 256px;
+  height: 100%;
+
+}
+
+.m-content {
+  flex: 1;
+  height: 100%;
+  overflow: auto;
+}
+
+.ant-menu{
+  height: 100%;
+}

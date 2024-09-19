@@ -6,9 +6,10 @@ import { Provider } from 'react-redux'
 import { composeWithDevTools } from 'redux-devtools-extension'
 import './global.css'
 import routes from './routes';
+import rootReduces from './reduces'
 
 
-const store = createStore(() => { }, composeWithDevTools(applyMiddleware(thunk)))
+const store = createStore(rootReduces, composeWithDevTools(applyMiddleware(thunk)))
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

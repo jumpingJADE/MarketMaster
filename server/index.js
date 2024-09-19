@@ -1,8 +1,12 @@
 const express = require('express')
 const PORT = 3030
 const app = express()
-
+const bodyParser = require('body-parser')
+const menu = require('./routes/menu')
 const test = require('./routes/test')
+
+app.use(bodyParser.json())
+app.use('/menu', menu)
 app.use('/', test)
 
 app.use(function (err, req, res, next) {
